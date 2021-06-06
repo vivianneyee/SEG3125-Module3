@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vivianne's Groceries</title>
+	  <link href="./Module-3-Grocery/styles/style.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <div class="titleSection">
+      <div class="titleSection">
+        <h1>Vivianne's Grocery Store</h1>
+      </div>
+      <div class="cartIcon">
+        <p class="cartItems" id="numOfItems">0</p>
+        <img src="./Module-2-Grocery/images/cartIcon.jpeg" alt="" onclick="goToCart()">
+      </div>
+    </div>
+
+    <div class="pages">
+      <div class="shop" id="shop">
+        <div class="leftPanel">
+          <div class="collapse">
+            <button type="button" class="collapsible">Filter</button>
+            <div id="Client" class="collapsibleContent">
+              <h3>Filter Selection</h3>
+              <p>Narrow down your search or select none to see all products</p>
+        	     Select a Category:
+               <form id="dietSelect" name="dietSelect" action="index.html" onchange="populateListProductChoices('displayProduct')">
+                 <input type="radio" name="dietSelectOption" id="Vegetarian" value="Vegetarian">
+                 <label for="Vegetarian">Vegetarian</label><br>
+                 <input type="radio" name="dietSelectOption" id="GlutenFree" value="GlutenFree">
+                 <label for="GlutenFree">Gluten-Free</label><br>
+                 <input type="radio" name="dietSelectOption" id="LactoseFree" value="LactoseFree">
+                 <label for="LactoseFree">Lactose-Free</label><br>
+                 <input type="radio" name="dietSelectOption" id="NutFree" value="NutFree">
+                 <label for="NutFree">Nut-Free</label><br>
+                 <input type="radio" name="dietSelectOption" id="Baby" value="Baby">
+                 <label for="NutFree">Baby</label><br>
+                 <input type="radio" name="dietSelectOption" id="None" value="None">
+                 <label for="None">None</label><br>
+                 <input type="checkbox" name="organic" value="organic" id="organic" onclick="populateListProductChoices('displayProduct')">
+                 <label for="Organic">Organic</label>
+               </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="mainPanel">
+          <div class="Products">
+            <h2>Products</h2>
+            <h3>Your targeted products</h3>
+            <p id="productInfo">Select a filter to see products</p>
+      	    Choose items to buy:
+      	    <div id="displayProduct"></div>
+      	     <button id="addCart" type="button" class="block" onclick="selectedItems()">
+      		       Add selected items to cart.
+      	     </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkout" id="checkout">
+        <div class="cartContainer">
+          <div class="cart">
+            Cart
+          </div>
+          <div id="Cart" class="cartContent">
+            <h3>Cart</h3>
+            <p>Your Cart</p>
+            <div id="displayCart"></div>
+            <button type="button" name="button" onclick="goToProducts()">Back to products</button>
+          </div>
+        </div>
+        <div class="deliveryPickupContainer">
+          <div class="cart">
+            Checkout
+          </div>
+          <div class="cartContent">
+            <p>Select a checkout option</p>
+            <form class="checkoutOptionsForm" action="index.html" method="post">
+              <input type="radio" name="dp" id="Delivery" value="Delivery">
+              <label for="Delivery">Delivery</label>
+              <input type="radio" name="dp" id="Pickup" value="Pickup">
+              <label for="Pickup">Pickup</label>
+            </form>
+            <button type="button" name="button">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="./Module-3-Grocery/scripts/groceries.js"></script>
+    <script type="text/javascript" src="./Module-3-Grocery/scripts/main.js"></script>
+  </body>
+  <footer>Website designed by Vivianne Yee :)</footer>
+</html>

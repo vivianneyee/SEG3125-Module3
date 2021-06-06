@@ -1,0 +1,147 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+/* Style the tab */
+body {
+  height: calc(100vh - 30px;);
+  font-family: "Optima", sans-serif;
+}
+
+.titleSection {
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.cartIcon {
+  padding-top: 10px;
+  display: flex;
+  cursor: pointer;
+}
+
+.cartIcon img {
+  width: 45px;
+  height: 45px;
+}
+
+.pages {
+  position: absolute;
+  width: 98%;
+}
+
+.shop {
+  top: 0;
+  left: 0;
+  display:grid;
+  grid-template-columns: 25% 75%;
+  grid-column-gap: 10px;
+  position: relative;
+}
+
+.checkout {
+  display: none;
+  grid-template-columns: 75% 25%;
+  grid-column-gap: 10px;
+  position:relative;
+}
+
+.collapsible {
+  background-color: #ffd9eb;
+  color: #383838;
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  border-style: solid;
+  border-width: thin;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Optima", sans-serif;
+}
+
+.active, .collapsible:hover {
+  background-color: #f0c2d7;
+}
+
+.collapsible:after {
+  content: '\02795';
+  font-size: 14px;
+  color: #383838;
+  float: right;
+  margin-left: 5px;
+}
+
+.collapsibleContent {
+  padding: 12px 4px;;
+  display: none;
+  overflow: hidden;
+  background-color: white;
+  border-style: solid;
+  border-width: thin;
+}
+
+.Products button {
+  background-color: #ffd9eb;
+  border-color: #e6a8c3;
+  border-width: thin;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.Products {
+  border-style: solid;
+  border-width: thin;
+  padding: 0 12px;
+  margin-right: 10px;
+  height: calc(100vh - 130px);
+}
+
+.Products h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.cart {
+  font-size: 18px;
+  background-color: #ffd9eb;
+  padding: 16px 0 16px 0;
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+}
+
+.cartContent button {
+  background-color: #ffd9eb;
+  border-color: #e6a8c3;
+  border-width: thin;
+  margin-top: 6px;
+  margin-bottom: 10px;
+
+}
+.cartContent {
+  padding-left: 4px;
+  border-style: solid;
+  border-width: thin;
+  padding-left: 10px;
+  height: calc(100vh - 190px);
+}
+
+.checkoutOptionsForm {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.deliveryPickupContainer {
+  margin-right: 10px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 99%;
+  height: 30px;
+}
